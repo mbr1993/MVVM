@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MVVM</string>
+    <string name="toast_message">Toast message is working</string>
+    <string name="user_name_is_empty">Username is empty</string>
+    <string name="password_is_empty">Password is empty</string>
+    <string name="user_min_length_error">Username is too short</string>
+    <string name="user_max_length_error">Username is too long</string>
+    <string name="password_error">Password is not acceptable</string>
 </resources>
