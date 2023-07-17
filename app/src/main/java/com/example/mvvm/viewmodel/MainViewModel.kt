@@ -1,7 +1,7 @@
 package com.example.mvvm.viewmodel
 
-import androidx.lifecycle.ViewModel
+import com.example.mvvm.repository.PostRepository
 
-class MainViewModel : ViewModel() {
+class MainViewModel(private val repository: PostRepository) {
 
 }

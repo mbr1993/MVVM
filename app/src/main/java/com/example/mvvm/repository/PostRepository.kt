@@ -1,5 +1,6 @@
 package com.example.mvvm.repository
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.mvvm.api.PostRemoteDataSource
 import com.example.mvvm.database.PostEntity
@@ -56,5 +57,9 @@ class PostRepository(
         } else {
             posts.postValue(NetworkResult.success(localDataSource.getAllPosts().value))
         }
+    }
+
+    fun getAllPosts(): LiveData<NetworkResult<List<PostEntity>>> {
+        return posts
     }
 }
