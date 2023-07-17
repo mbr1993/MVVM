@@ -1,7 +1,7 @@
 package com.example.mvvm.repository
 
 import com.example.mvvm.api.ApiService
-import com.example.mvvm.api.RetrofitClient
+import com.example.mvvm.api.ApiClient
 import com.example.mvvm.model.User
 import retrofit2.Call
 import retrofit2.Callback
@@ -10,7 +10,7 @@ import retrofit2.Response
 class MainRepository {
     fun getAllUser(): List<User> {
         val list: MutableList<User> = ArrayList()
-        val api = RetrofitClient.getRetrofit().create(ApiService::class.java)
+        val api = ApiClient.getApiClient().create(ApiService::class.java)
         api.getAllUsers().enqueue(object : Callback<List<User>> {
             override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
                 if (response.isSuccessful) {
