@@ -54,4 +54,6 @@ dependencies {
 
     implementation "android.arch.lifecycle:extensions:1.1.1"
     implementation "android.arch.lifecycle:viewmodel:1.1.1"
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
 }
