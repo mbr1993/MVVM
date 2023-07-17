@@ -1,4 +1,4 @@
-package com.example.mvvm.utility
+package com.example.mvvm.model.utility
 
 enum class NetworkStatus {
     LOADING,

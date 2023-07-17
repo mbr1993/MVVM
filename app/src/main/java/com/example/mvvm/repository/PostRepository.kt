@@ -1,13 +1,14 @@
 package com.example.mvvm.repository
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.mvvm.api.PostRemoteDataSource
 import com.example.mvvm.database.PostEntity
 import com.example.mvvm.database.PostLocalDataSource
 import com.example.mvvm.model.Post
-import com.example.mvvm.utility.NetworkHelper
-import com.example.mvvm.utility.NetworkResult
+import com.example.mvvm.model.utility.NetworkHelper
+import com.example.mvvm.model.utility.NetworkResult
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
@@ -34,6 +35,7 @@ class PostRepository(
          */
 
         if (networkHelper.isNetworkConnected()) {
+            Log.d("TTT", "Network connected")
             CoroutineScope(Dispatchers.IO).launch {
                 posts.postValue(NetworkResult.loading())
                 try {
@@ -55,6 +57,7 @@ class PostRepository(
                 }
             }
         } else {
+            Log.d("TTT", "not connected")
             posts.postValue(NetworkResult.success(localDataSource.getAllPosts().value))
         }
     }

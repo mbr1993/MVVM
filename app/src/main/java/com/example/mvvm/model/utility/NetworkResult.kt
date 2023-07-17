@@ -1,4 +1,4 @@
-package com.example.mvvm.utility
+package com.example.mvvm.model.utility
 
 data class NetworkResult<out T>(
     val status: NetworkStatus,
@@ -13,7 +13,7 @@ data class NetworkResult<out T>(
         fun <T> error(message: String?): NetworkResult<T> {
             return NetworkResult(NetworkStatus.ERROR, null, message)
         }
-        fun <T> loading() : NetworkResult<T>{
+        fun <T> loading() : NetworkResult<T> {
             return NetworkResult(NetworkStatus.LOADING, null, null)
         }
     }
