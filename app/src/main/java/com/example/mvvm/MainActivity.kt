@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.mvvm.databinding.ActivityMainBinding
 import com.example.mvvm.repository.MainRepository
-import com.example.mvvm.viewmodel.Factory
-import com.example.mvvm.viewmodel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
 

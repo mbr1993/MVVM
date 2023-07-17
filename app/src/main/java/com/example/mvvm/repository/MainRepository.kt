@@ -2,7 +2,6 @@ package com.example.mvvm.repository
 
 import com.example.mvvm.api.ApiService
 import com.example.mvvm.api.ApiClient
-import com.example.mvvm.model.User
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
